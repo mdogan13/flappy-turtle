@@ -119,9 +119,9 @@ while True:
         collision_counter += 1
         if collision_counter > 1:
             resetGame()
-    if bird.ycor() < -290:
+    if bird.ycor() < -290: # collision check for ground
         resetGame()
-    if bird.ycor() > 300:
+    if bird.ycor() > 300: # collision check for ceiling
         bird.sety(bird.ycor()-20)
     else:
         y = bird.ycor()
